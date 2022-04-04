@@ -1,11 +1,14 @@
 {
-  "name": "Link Clicker",
-  "description": "Press ALT + Click within destiny.gg or youtube chat to click the (first) closest link within the message",
+  "name": "DGG Link Clicker",
+  "description": "Press CTRL + Click within destiny.gg or Twitch chat to click the (first) closest link within the message. \r Boring details: \n * Prioritises older messages. \n * Opens links in a new tab without interrupting the stream. \n * DGG #embeds have their own case to work as normal. \n * Twitch is supported but much less tested so bugs may crop up. \n Probably not putting much more work into this. \n \n GH: https://github.com/AlfieSimpson/LinkClicker",
   "version": "1.0",
   "manifest_version": 3,
   "content_scripts": [{
 	"matches": ["https://www.destiny.gg/*", "https://www.twitch.tv/*"],
 	"js": ["injection.js"]
   }],
+  "icons": { 
+           "48": "icon48.png",
+          "128": "icon128.png" },
   "action": {}
 }

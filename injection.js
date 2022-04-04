@@ -58,7 +58,11 @@
 			
 			var target = e.target || e.srcElement; 
 			var link;
-			if (target.tagName.toLowerCase()!= "div"){
+			if (target.tagName.toLowerCase() == "a" && target.classList.contains(linkClass)){
+				link = target;
+				e.preventDefault();
+			}
+			else if (target.tagName.toLowerCase()!= "div"){
 				link = target.querySelector("a."+linkClass) || (target.closest("."+parentClass).querySelector("a."+linkClass)) || findClosestMatch(e);
 			}
 			else {
